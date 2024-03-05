@@ -54,8 +54,8 @@ var environmentConfigurationMap = {
     }
     sqlDatabase: {
       sku: {
-        name: 'Standard'
-        tier: 'Standard'
+        name: 'Basic'
+        tier: 'Basic'
       }
     }
   }
@@ -72,8 +72,8 @@ var environmentConfigurationMap = {
     }
     sqlDatabase: {
       sku: {
-        name: 'Standard'
-        tier: 'Standard'
+        name: 'Basic'
+        tier: 'Basic'
       }
     }
   }
