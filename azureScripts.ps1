@@ -5,7 +5,7 @@ $context = Get-AzSubscription -SubscriptionName PAYG-Sandboxes
 Set-AzContext $context
 
 
-Set-AzDefault -ResourceGroupName rg_sb_eastus_89803_1_170967138212  ##change resourse group name
+Set-AzDefault -ResourceGroupName rg_sb_eastus_89803_1_170974478783  ##change resourse group name
 
 $githubOrganizationName = 'nenad0707'
 
@@ -42,7 +42,7 @@ New-AzADAppFederatedCredential `
    -Audience 'api://AzureADTokenExchange' `
    -Subject "repo:$($githubOrganizationName)/$($githubRepositoryName):ref:refs/heads/main"   
 
-$testResourceGroup = Get-AzResourceGroup -Name rg_sb_eastus_89803_1_170967138212  ##change resourse group name
+$testResourceGroup = Get-AzResourceGroup -Name rg_sb_eastus_89803_1_170974478783  ##change resourse group name
 
 New-AzADServicePrincipal -AppId $($testApplicationRegistration.AppId)
 New-AzRoleAssignment `
@@ -50,7 +50,7 @@ New-AzRoleAssignment `
    -RoleDefinitionName Contributor `
    -Scope $($testResourceGroup.ResourceId)
    
-$productionResourceGroup = Get-AzResourceGroup -Name rg_sb_southeastasia_89803_3_170967138642 ##change resourse group name
+$productionResourceGroup = Get-AzResourceGroup -Name rg_sb_southeastasia_89803_3_170974479147 ##change resourse group name
 
 New-AzADServicePrincipal -AppId $($productionApplicationRegistration.AppId)
 New-AzRoleAssignment `
