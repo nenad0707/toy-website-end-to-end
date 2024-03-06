@@ -35,7 +35,6 @@ jobs:
       reviewApiKey: ${{ secrets.REVIEW_API_KEY_TEST }}
       sqlServerAdministratorLoginPassword: ${{ secrets.SQL_SERVER_ADMINISTRATOR_LOGIN_PASSWORD_TEST }}
 
-  # Deploy to the production environment.
   deploy-production:
     uses: ./.github/workflows/deploy.yml
     needs:
