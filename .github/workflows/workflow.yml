@@ -25,7 +25,7 @@ jobs:
     needs: [build, lint]
     with:
       environmentType: Test
-      resourceGroupName: rg_sb_eastus_89803_1_170974478783
+      resourceGroupName: rg_sb_eastus_89803_1_170975854155
       reviewApiUrl: https://sandbox.contoso.com/reviews
       sqlServerAdministratorLogin: TestToyCompanyAdmin
     secrets:
@@ -44,7 +44,7 @@ jobs:
       - deploy-test
     with:
       environmentType: Production
-      resourceGroupName: rg_sb_southeastasia_89803_3_170974479147
+      resourceGroupName: rg_sb_southeastasia_89803_3_170975854349
       reviewApiUrl: https://api.contoso.com/reviews
       sqlServerAdministratorLogin: ToyCompanyAdmin
     secrets:
