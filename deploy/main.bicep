@@ -162,9 +162,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
     resource storageAccountImagesBlobContainer 'containers' = {
       name: storageAccountImagesBlobContainerName
 
-      // properties: {
-      //   publicAccess: 'Blob'
-      // }
+      properties: {
+        publicAccess: 'Blob'
+      }
     }
   }
 }
