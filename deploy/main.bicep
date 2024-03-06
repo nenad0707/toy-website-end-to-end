@@ -152,9 +152,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   location: location
   kind: 'StorageV2'
   sku: environmentConfigurationMap[environmentType].storageAccount.sku
-  // properties: {
-  //   allowBlobPublicAccess: true
-  // }
+  properties: {
+    allowBlobPublicAccess: true
+  }
 
   resource blobService 'blobServices' = {
     name: 'default'
@@ -162,9 +162,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
     resource storageAccountImagesBlobContainer 'containers' = {
       name: storageAccountImagesBlobContainerName
 
-      properties: {
-        publicAccess: 'Blob'
-      }
+      // properties: {
+      //   publicAccess: 'Blob'
+      // }
     }
   }
 }
